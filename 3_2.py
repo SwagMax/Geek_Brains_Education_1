@@ -3,9 +3,9 @@
 корректную работу с числительными, начинающимися с заглавной буквы — результат тоже
 должен быть с заглавной. Например:
 
->>> num_translate_adv("One")
+#>>> num_translate_adv("One")
 "Один"
->>> num_translate_adv("two")
+#>>> num_translate_adv("two")
 "два"
 """
 #проверка .istitle()
@@ -13,6 +13,8 @@ abc = {'zero': 'ноль', 'one': 'один', 'two': 'два', 'three': 'три'
 
 
 def num_translate_adv(word):
+    if word.istitle():
+        return str(abc.get(word.lower())).title()
     return abc.get(word)
 
 

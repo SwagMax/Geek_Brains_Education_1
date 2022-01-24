@@ -15,23 +15,32 @@ adjectives = ["веселый", "яркий", "зеленый", "утопичн�
 сделать аргументы именованными?
 """
 
-import random
+from random import choice, randrange
 
 
-def get_jokes(count = 2):
+def get_jokes(count = 2, repeat=False):
     """Random jokes
 
     :param count: count jokes
+    :param repeat: unique(False) or not unique(True)
     :return: list of count jokes
     """
-    a_ls = []
-    a = random.choice(nouns), random.choice(adverbs), random.choice(adjectives)
+    no, adv, adj = nouns.copy(), adverbs.copy(), adjectives.copy()
+    list_of_j = []
+    list_min = min(no, adv, adj)
 
-    print( [a_ls.append(a)])
+    while count and len(list_min):
+        num = randrange(len(list_min))
+        if repeat:
+            list_of_j.append(f"{no.pop(num)} {adv.pop(num)} {adj.pop(num)}")
+        else:
+            list_of_j.append(f"{choice(nouns)} {choice(adverbs)} {choice(adjectives)}")
+        count -= 1
+    return list_of_j
 
 
 nouns = ["автомобиль", "лес", "огонь", "город", "дом"]
 adverbs = ["сегодня", "вчера", "завтра", "позавчера", "ночью"]
 adjectives = ["веселый", "яркий", "зеленый", "утопичный", "мягкий"]
 
-get_jokes(3)
+print(get_jokes())
