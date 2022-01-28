@@ -7,14 +7,11 @@ Exchange rate on the date of the request
 :copyright: (c) 2022 by SwagMax.
 :license: My_dog 2.0, see LICENSE for more details.
 """
+
 from requests import get, utils
+from datetime import datetime
 
-
-response = get('http://www.cbr.ru/scripts/XML_daily.asp')
-encodings = utils.get_encoding_from_headers(response.headers)
-content = response.content.decode(encoding=encodings)
-# print(content.split('ID'))
-my_list = content.split('ID')
+response = utils.get_unicode_from_response(get('http://www.cbr.ru/scripts/XML_daily.asp'))
 
 
 def currency_rates(val):
@@ -23,14 +20,14 @@ def currency_rates(val):
     :param val: type "USD"
     :return: float
     '''
+
+    my_list = response.split('ID')
+
     for i_str in my_list:
-        if val in i_str:
-            RUB = float(i_str.split('Value')[1].strip('></').replace(',', '.'))
-    return RUB
+        if val.upper() in i_str:
+            print(datetime.strptime(my_list[0].split('"')[-4], '%d.%m.%Y').date(), ", ", sep="", end="")
+            return float(i_str.split('Value')[1].strip('></').replace(',', '.'))
 
 
 if __name__ == "__main__":
-    print('i`m a file')
-else:
-    print('i`m a module util.py')
-#print(currency_rates('USD'))
+    print(currency_rates(input('Введи валюту: \n')))

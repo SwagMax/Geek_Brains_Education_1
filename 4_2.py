@@ -8,25 +8,23 @@ str, решить поставленную задачу? Функция долж
 Если в качестве аргумента передали код валюты, которого нет в ответе, вернуть None. Можно ли сделать работу функции не зависящей от того,
 в каком регистре был передан аргумент? В качестве примера выведите курсы доллара и евро.
 """
+
 from requests import get, utils
 
-
-response = get('http://www.cbr.ru/scripts/XML_daily.asp')
-encodings = utils.get_encoding_from_headers(response.headers)
-content = response.content.decode(encoding=encodings)
-# print(content.split('ID'))
-my_list = content.split('ID')
+response = utils.get_unicode_from_response(get('http://www.cbr.ru/scripts/XML_daily.asp'))
 
 
 def currency_rates(val):
     '''
     Exchange rate on the date of the request
-    :param val: type "USD"
+    :param val: like: "USD"
     :return: float
     '''
-    for i_str in my_list:
-        if val in i_str:
-            RUB = float(i_str.split('Value')[1].strip('></').replace(',', '.'))
-    return RUB
 
-print(currency_rates('USD'))
+    my_list = response.split('ID')
+
+    for i_str in my_list:
+        if val.upper() in i_str:
+            return float(i_str.split('Value')[1].strip('></').replace(',', '.'))
+
+print(currency_rates(input('Введи валюту:\n')))
