@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28228626-bf1c-42c0-b959-734065ba2ec3" name="Changes" comment="commit" />
+    <list default="true" id="28228626-bf1c-42c0-b959-734065ba2ec3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +48,7 @@
       </console-settings>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.5_1">
     <configuration name="5_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Geek_Brains_Education_1" />
       <option name="INTERPRETER_OPTIONS" value="" />
