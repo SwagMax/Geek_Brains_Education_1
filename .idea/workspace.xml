@@ -50,7 +50,11 @@
       </console-settings>
     </option>
   </component>
+<<<<<<< Updated upstream
   <component name="RunManager" selected="Python.6_3">
+=======
+  <component name="RunManager" selected="Python.5_1">
+>>>>>>> Stashed changes
     <configuration name="5_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
