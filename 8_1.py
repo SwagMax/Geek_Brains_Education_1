@@ -3,9 +3,9 @@
 виде словаря. Если адрес не валиден, выбросить исключение ValueError.
 Пример:
 
-    >>> email_parse('someone@geekbrains.ru')
+    #>>> email_parse('someone@geekbrains.ru')
     {'username': 'someone', 'domain': 'geekbrains.ru'}
-    >>> email_parse('someone@geekbrainsru')
+    #>>> email_parse('someone@geekbrainsru')
     Traceback (most recent call last):
         File "<stdin>", line 1, in <module>
         ...
