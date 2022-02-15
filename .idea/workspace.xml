@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28228626-bf1c-42c0-b959-734065ba2ec3" name="Changes" comment="9.1">
+    <list default="true" id="28228626-bf1c-42c0-b959-734065ba2ec3" name="Changes" comment="9.2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -288,7 +288,21 @@
       <option name="project" value="LOCAL" />
       <updated>1644915869676</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="9.2">
+      <created>1644925271732</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1644925271734</updated>
+    </task>
+    <task id="LOCAL-00006" summary="9.2">
+      <created>1644925352184</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1644925352184</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -307,6 +321,8 @@
     <MESSAGE value="8_1" />
     <MESSAGE value="8_3" />
     <MESSAGE value="9.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="9.1" />
+    <MESSAGE value="9.2.1" />
+    <MESSAGE value="9.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="9.2" />
   </component>
 </project>
